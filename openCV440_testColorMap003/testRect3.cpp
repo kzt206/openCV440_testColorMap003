@@ -26,7 +26,7 @@ void testRect3() {
 
 
 	// fill with white
-	image = Scalar(255, 255, 255);
+	image = Scalar(255, 255, 255);  // Blue,Green,Red
 
 
 	// input data
@@ -47,7 +47,7 @@ void testRect3() {
 	// draw rectangles 4
 	for (int i = 0; i < sizeof(x) / sizeof(*x); i++) {
 		Rect rect(0 + x[i] + xShift, yMax - dy - y[i] - yShift, dx, dy);  // (x, y, width, height)
-		rectangle(image, rect, Scalar(z[i], z[i], 255 - z[i]), -1, LINE_4);
+		rectangle(image, rect, Scalar(z[i], z[i], 255 - z[i]), -1, LINE_4); // Scalar(Blue,Green,Red)  -1:fill
 	}
 
 	//axis
