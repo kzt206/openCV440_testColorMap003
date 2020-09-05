@@ -59,6 +59,7 @@ void testRect3() {
 
 	//Show image
 	imshow("Map", image);
+	imwrite("Rect3b.jpg",image);
 	waitKey();
 
 }
