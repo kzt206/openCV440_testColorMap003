@@ -38,7 +38,7 @@ void testRect3() {
 		for (int j = 0; j < numberData; j++) {
 			x[n] = i * dx;
 			y[n] = j * dy;
-			z[n] = (i * i - j * j) / 5 + 128;
+			z[n] = (i * i - j * j) / 4 + 128;
 			n++;
 		}
 	}
