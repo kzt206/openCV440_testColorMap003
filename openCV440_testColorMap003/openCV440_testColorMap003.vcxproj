@@ -156,6 +156,7 @@
     <ClCompile Include="testRect1.cpp" />
     <ClCompile Include="testRect2.cpp" />
     <ClCompile Include="testRect3.cpp" />
+    <ClCompile Include="testRect3Big.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

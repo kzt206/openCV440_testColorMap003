@@ -2,12 +2,12 @@
 
 using namespace cv;
 
-void testRect3();
+void testRect3big();
 
 int main()
 {
 
-	testRect3();
+	testRect3big();
 
 	return 0;
 
