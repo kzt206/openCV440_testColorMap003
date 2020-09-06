@@ -3,11 +3,13 @@
 using namespace cv;
 
 void testRect3();
+void testContour1();
 
 int main()
 {
 
-	testRect3();
+	//testRect3();
+	testContour1();
 
 	return 0;
 

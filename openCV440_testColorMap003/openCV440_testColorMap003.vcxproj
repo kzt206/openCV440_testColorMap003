@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="testAxis.cpp" />
+    <ClCompile Include="testContour1.cpp" />
     <ClCompile Include="testRect1.cpp" />
     <ClCompile Include="testRect2.cpp" />
     <ClCompile Include="testRect3.cpp" />
