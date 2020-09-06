@@ -4,10 +4,9 @@
 using namespace cv;
 
 void axis(Point x0, Point x1, Point y0, Point y1, Mat& image);
-int ColorScaleBCGYR(double in_value);
 void ColorScaleBCGYR(int& r, int& g, int& b, int z);
 
-void testContour1() {
+void testContour2() {
 
 	// image object
 	// full color
@@ -45,18 +44,18 @@ void testContour1() {
 		for (int j = 0; j < numberData; j++) {
 			int tmpx = i * dx;
 			int tmpy = j * dy;
-			double tmpz =  pow(tmpx-250,2) + pow(tmpy,2);
+			double tmpz = pow(tmpx - 250, 2) + pow(tmpy-250, 2);
 			if (maxZ < tmpz) maxZ = tmpz;
 			if (minZ > tmpz) minZ = tmpz;
 			x[n] = tmpx;
 			y[n] = tmpy;
 			zd[n] = tmpz;
 			n++;
-			
+
 		}
 	}
 	std::cout << sizeof(x) / sizeof(*x);
-	
+
 	//normarize
 	n = 0;
 	for (int i = 0; i < numberData; i++) {
@@ -66,25 +65,15 @@ void testContour1() {
 		}
 	}
 
-	int halfZ = 256/2;
+	int halfZ = 256 / 2;
 	// draw rectangles 4
 	for (int i = 0; i < sizeof(x) / sizeof(*x); i++) {
 		Rect rect(0 + x[i] + xShift, yMax - dy - y[i] - yShift, dx, dy);  // (x, y, width, height)
 		int r, g, b;
-		/*if (z[i] < halfZ) {
-			r = 0;
-			g = int(255. / (halfZ - 0) * (z[i] - 0));
-			b = int(255. - 255 / (halfZ - 0) * (z[i] - 0));
-		}
-		else {
-			r = int(255. / (255-halfZ) * (z[i] - halfZ));
-			g = int(255. - 255 / (255- halfZ) * (z[i] - halfZ));
-			b = 0;
-		}*/
-
+		
 		ColorScaleBCGYR(r, g, b, z[i]);
 
-		Scalar color(b,g,r);
+		Scalar color(b, g, r);
 		rectangle(image, rect, color, -1, LINE_4); // Scalar(Blue,Green,Red)  -1:fill
 	}
 
@@ -97,7 +86,7 @@ void testContour1() {
 
 	//Show image
 	imshow("Map", image);
-	imwrite("contour1.jpg", image);
+	imwrite("contour2.jpg", image);
 	waitKey();
 
 
