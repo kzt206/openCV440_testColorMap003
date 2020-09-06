@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="colorMap1.cpp" />
     <ClCompile Include="colorScaleBCGYR.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="testAxis.cpp" />

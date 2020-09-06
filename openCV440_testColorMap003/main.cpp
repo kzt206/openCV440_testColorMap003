@@ -8,6 +8,7 @@ void testRect3();
 void testContour1();
 void testContour2();
 int testReadData(string infile,double *x, double *y, double *z);
+void colorMap1(int numData,double x[],double y[],double z[]);
 
 int main()
 {
@@ -17,12 +18,13 @@ int main()
 
 	double x[10000], y[10000], z[10000];
 	string infile = "C:\\Users\\kzt20\\source\\repos\\openCV440_testColorMap003\\openCV440_testColorMap003\\testdata.txt";
-	testReadData(infile,x,y,z);
+	int numData = testReadData(infile,x,y,z);
 
-    for (int i = 0; i < 4;i++) {
+    for (int i = 0; i < numData;i++) {
         cout << x[i] << ',' << y[i] << ',' << z[i] << endl;
     }
 
+	colorMap1(numData,x, y, z);
 
 	return 0;
 

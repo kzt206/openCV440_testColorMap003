@@ -10,15 +10,16 @@ int testReadData(string infile, double* x, double* y, double* z) {
     std::ifstream ifs(infile);
     std::string str, s;
 
+    int number = 0;
+
     if (ifs.fail()) {
         cerr << "Failed to open file." << std::endl;
         return -1;
     }
 
     int i = 0;
-
     while (getline(ifs, str)) {
-        std::cout << str << std::endl;
+       // std::cout << str << std::endl;
         stringstream ss{ str };
         vector<string> v;
         while (getline(ss, s, ' ')) {
@@ -33,10 +34,12 @@ int testReadData(string infile, double* x, double* y, double* z) {
         y[i] = stod(v[1]);
         z[i] = stod(v[2]);
 
-
         i++;
+        number++;
+
     }
 
     ifs.close();
 
+    return number;
 }
