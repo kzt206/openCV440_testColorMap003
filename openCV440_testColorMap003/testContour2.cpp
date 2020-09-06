@@ -77,6 +77,8 @@ void testContour2() {
 		rectangle(image, rect, color, -1, LINE_4); // Scalar(Blue,Green,Red)  -1:fill
 	}
 
+	//GaussianBlur(image, image, Size(7, 7), 1.5, 1.5);
+
 	//axis
 	Point x0(xShift, yMax - yShift);
 	Point x1(xMax - xMaxShift, yMax - yShift);
@@ -86,7 +88,7 @@ void testContour2() {
 
 	//Show image
 	imshow("Map", image);
-	imwrite("contour2.jpg", image);
+	imwrite("contour2gausian.jpg", image);
 	waitKey();
 
 
