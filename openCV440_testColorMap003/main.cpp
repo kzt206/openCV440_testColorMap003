@@ -17,7 +17,7 @@ int main()
 	//testContour2();
 
 	double x[10000], y[10000], z[10000];
-	string infile = "C:\\Users\\kzt20\\source\\repos\\openCV440_testColorMap003\\openCV440_testColorMap003\\testdata.txt";
+	string infile = "C:\\Users\\kzt20\\source\\repos\\openCV440_testColorMap003\\openCV440_testColorMap003\\testdata2.txt";
 	int numData = testReadData(infile,x,y,z);
 
     for (int i = 0; i < numData;i++) {
